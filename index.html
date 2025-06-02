@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Edwin Osei Agyemang">
+    <meta name="description" content="QRGEN is a simple QR Code generator that turns text and url into QR-codes.">
+
+    <meta property="og:title" content="QRGEN | Online QR Code generator">
+    <meta property="og:description" content="QRGEN is a simple modern QR Code generator for text and URL.">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="#">
+    <meta property="og:image" content="#">
+    <meta property="og:site_name" content="QRGEN.Online">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="apple-touch-icon" href="asset/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="asset/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="asset/img/android-chrome-512x512.png">
+    <link rel="icon" type="image/ico" href="asset/img/favicon.ico">
+    <link rel="manifest" href="asset/img/site.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=qr_code_2_add" />
+    <link rel="stylesheet" href="asset/src/css/qr.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QRGEN | Online QR Code generator">
+    <meta name="twitter:description" content="QRGEN is a simple modern QR Code generator for text and URL.">
+    <meta name="twitter:image" content="#">
+    <meta name="twitter:site" content="#">
+    <title>QRGEN - QR Code Generator</title>
+
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+</head>
+<body>
+    <div class="enclose" id="header">
+        <ul>
+            <span class="right">
+                <a href="#convert-text">
+                    <li>QRGEN</li>
+                </a>
+            </span>
+            <span class="left">
+                <a href="https://github.com/ed-coded" target="_blank">
+                    <li>Github</li>
+                </a>
+                <a href="https://www.linkedin.com/in/edwin-agyemang/" target="_blank">
+                    <li>Linkedin</li>
+                </a>
+            </span>
+        </ul>
+    </div>    
+    <p class="convert-text" id="convert-text">Generate QR Code</p>
+    <div class="container first-box" id="start">
+        <input type="text" id="text" placeholder="Enter text / link here..">
+        <div id="canvas"></div>
+        <div class="button">
+            <button onclick="generateQRCode()">Generate Code</button>
+            <button onclick="downloadQRCode()">Download</button>
+            <button onclick="clearQRCode()">Clear</button>
+        </div>
+    </div>
+    <div class="container box-2">
+        <h2 class="text-header"><span>Simple and Fast QR Code Generator!</span></h2>
+        <p class="paragraph">QRGEN allows you to instantly turn your text or links into QR codes for websites, contacts, promotions, social media, and more. Just type or paste your content into the box, click the Generate Code button, and your custom QR code is ready to preview, download, and share.</p>
+    </div>
+    <div class="container box-2">
+        <h2 class="text-header txt-bx"><span>Clean, Reliable, and User-Friendly</span></h2>
+        <p class="paragraph">Your generated QR codes can be used on business cards, posters, digital menus, product packaging, documents, websites, and presentations. Whether you are sharing a YouTube link, an event invitation, or a simple message, QuickQR makes it quick and easy.</p>
+    </div>
+    <footer class="enclose">
+        <div class="footer-text">
+
+        </div>
+    </footer>
+    <p class="last">
+        <span>&copy;2025&nbsp;|&nbsp;QRGEN - Online QR Code Generator&nbsp;|&nbsp;All rights reserved.</span>
+    </p>
+    <script type="text/javascript" src="asset/src/js/qr.js"></script>
+</body>
+</html>

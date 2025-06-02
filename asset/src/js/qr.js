@@ -1,0 +1,119 @@
+const qrCode = new QRCodeStyling({
+    type: "canvas",
+    shape: "square",
+    width: 250,
+    height: 250,
+    data: "",
+    margin: 0,
+    qrOptions: {
+        typeNumber: "0",
+        mode: "Byte",
+        errorCorrectionLevel: "H"
+    },
+    imageOptions: {
+        saveAsBlob: true,
+        hideBackgroundDots: true,
+        imageSize: 0.4,
+        margin: 0
+    },
+    dotsOptions: {
+        type: "rounded",
+        color: "#000000",
+        roundSize: true
+    },
+    backgroundOptions: {
+        round: 0,
+        color: "#ffffff"
+    },
+    image: null,
+    dotsOptionsHelper: {
+        colorType: {
+        single: true,
+        gradient: false
+        },
+        gradient: {
+        linear: true,
+        radial: false,
+        color1: "#6a1a4c",
+        color2: "#6a1a4c",
+        rotation: "0"
+        }
+    },
+    cornersSquareOptions: {
+        type: "extra-rounded",
+        color: "#000000"
+    },
+    cornersSquareOptionsHelper: {
+        colorType: {
+        single: true,
+        gradient: false
+        },
+        gradient: {
+        linear: true,
+        radial: false,
+        color1: "#000000",
+        color2: "#000000",
+        rotation: "0"
+        }
+    },
+    cornersDotOptions: {
+        type: "square",
+        color: "#000000"
+    },
+    cornersDotOptionsHelper: {
+        colorType: {
+        single: true,
+        gradient: false
+        },
+        gradient: {
+        linear: true,
+        radial: false,
+        color1: "#000000",
+        color2: "#000000",
+        rotation: "0"
+        }
+    },
+    backgroundOptionsHelper: {
+        colorType: {
+        single: true,
+        gradient: false
+        },
+        gradient: {
+        linear: true,
+        radial: false,
+        color1: "#ffffff",
+        color2: "#ffffff",
+        rotation: "0"
+        }
+    },
+});
+
+function generateQRCode(){
+
+    const data = document.getElementById("text").value.trim()
+    if(!data){
+        alert("Please add an input ..");
+        return;
+    }
+    qrCode.update({
+        data: data
+    });
+
+    qrCode.append(document.getElementById("canvas"));
+
+}
+
+function downloadQRCode(){
+
+    qrCode.download({ name: "Qr", extension: "png" });
+
+}
+
+function clearQRCode(){
+
+    document.getElementById("text").value="";
+
+    const cls = document.getElementById("canvas");
+    cls.innerHTML="";
+    
+}

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    /*--color:EBEFBF */
+    --background-clr: #FBF9FF;
+    --background-clr-2: #000807;
+    --primary-clr: #D9D9D9;
+    --secondary-clr: ;
+    --accent-clr: #ff9215;
+    --box-clr: #9395d3;
+    --ff: "Poppins", "Roboto", sans-serif;
+    --secondary-ff: "Inter";
+    --ff-clr: #000807;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: var(--background-clr) ;
+    font-family: var(--ff);
+    height: 100%;
+    color: var(--ff-clr);
+}
+
+.enclose{
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--background-clr-2);
+    padding: 0.8rem;
+}
+
+#header{
+    color: var(--background-clr);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--secondary-ff);
+    border-bottom: 2px solid var(--box-clr);
+}
+
+.convert-text{
+    display: block;
+    font-family: var(--secondary-ff);
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.15px;
+    padding: .3em .1em 0em;
+    margin: .5rem 0rem 0rem 0rem;
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 5px 1em;
+    padding: .5em auto;
+}
+
+#header ul a{
+    text-decoration: none;
+    color: var(--background-clr);
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--box-clr);
+    width: 500px;
+    min-height: 20vh;
+    max-height: 80vh;
+    padding: 10px;
+    margin: 3rem auto;
+    margin-top: -1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.first-box{
+    margin-top: 1rem;
+}
+
+.box-2{
+    background-color: var(--primary-clr);
+}
+
+.text-header{
+    font-size: 1.3rem;
+    margin-left: -5.5rem;
+    margin-bottom: 1rem;
+ }
+
+ .txt-bx{
+    font-size: 1.3rem;
+    margin-left: -6.1rem;
+    margin-bottom: 1rem;
+ }
+
+ .paragraph{
+    font-size: 1rem;
+
+ }
+
+.material-symbols-outlined{
+    font-size: 2rem;
+    overflow: hidden;
+}
+/*
+    .box-2 canvas{
+        margin: auto;
+    }
+*/
+.container input[type="text"]{
+    color: var(--ff-clr);
+    width: 95%;
+    height: 2em;
+    margin: 2em auto;
+    padding: 1.5em;
+    border: 0;
+    font-weight: 400;
+}
+
+.container input[type="text"]::placeholder{
+    font-weight: 600;
+}
+
+.container input[type="text"]:focus{
+    outline: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.canva-container{
+    border: 5px solid white;
+    max-width: 500px;
+    max-height: 500px;
+    width: 300px;
+    height: 300px;
+}
+
+.button{
+    padding: 1em;
+    margin-top: 1rem;
+}
+
+.button button{
+    padding: 0.5rem;
+    border-radius: .2rem;
+    border: none;
+    font-weight: 700;
+}
+
+.button button:hover{
+    background-color: var(--accent-clr);
+    box-shadow: rgba(16, 22, 29, 0.2) 0px 8px 24px;
+    color: var(--background-clr);
+}
+
+footer{
+    background-color: var(--primary-clr) !important;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 30vh;
+    /*border-top: 2px solid var(--accent-clr);*/
+}
+
+.last{
+    text-align: center;
+    font-family: var(--ff);
+    font-weight: 700;
+    font-size: .9rem;
+    margin: .5rem;
+}
